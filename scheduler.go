@@ -91,10 +91,6 @@ func NewTask(handler func() error) Task {
 	}
 }
 
-func (t *Task) HandleTimeout(timeout time.Duration) {
-	t.Timeout = timeout
-}
-
 // HandleError sets the ErrorHandler for the task. The ErrorHandler is a function that handles errors occurring during task execution.
 // - If ErrorHandler is not set (nil), any error that occurs is logged.
 // - If ErrorHandler is provided, it's called with the error that occurred during task execution.
