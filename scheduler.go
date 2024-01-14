@@ -122,7 +122,7 @@ type TaskScheduler struct {
 // The done channel is used to signal the scheduler has stopped
 // The time manager is used to create time.Ticker
 func NewTaskScheduler() *TaskScheduler {
-	logger := log.New(os.Stdout, "TINYSCHEDULER: ", log.LstdFlags)
+	logger := log.New(os.Stdout, "TinyScheduler: ", log.LstdFlags)
 	logger.SetFlags(log.LstdFlags)
 	return &TaskScheduler{
 		tasks:       make(map[time.Duration][]Task),
